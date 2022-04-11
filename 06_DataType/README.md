@@ -36,49 +36,54 @@
 - 따옴표나 백틱으로 감싸는 이유는 자바스크립트 엔진이 키워드나 식별자 같은 토큰과 구분하기 위해서이다.
 <br />
 <br />
+
+# 템플릿 리터럴
 - ES6 부터 `템플릿 리터럴` 이라고하는 새로운 문자열이 도입 
-    - `멀티라인 문자열`, `표현식 삽입`, `태그드 템플릿` 등 편리한 문자열 처리기능 제공
-    - 템플릿 리터럴은 백틱(``)을 이용해서 표현한다. 
-        - 멀티라인 문자열
+- `멀티라인 문자열`, `표현식 삽입`, `태그드 템플릿` 등 편리한 문자열 처리기능 제공
+- 템플릿 리터럴은 백틱(``)을 이용해서 표현한다. 
+<br />
+<br />
+- 멀티라인 문자열
 
-            ```jsx
-            // 일반 문자열 내에서는 줄바꿈(개행)이 허용되지 않는다.
-            var str = "Hello
-            world";
-            // SyntaxError: Invaild or unexpected token
-            // 그래서 HTML 문자열을 작성시 기존 문자열 방식으로는 이스케이프 시퀀스(escape sequence)를 사용해야 한다.
-            var template = '<ul>\n\t<li><a href="#">Home</a></li>\n</ul>';
-            console.log(template);
-            ```
+```Javascript
+// 일반 문자열 내에서는 줄바꿈(개행)이 허용되지 않는다.
+var str = "Hello
+world";
+// SyntaxError: Invaild or unexpected token
+// 그래서 HTML 문자열을 작성시 기존 문자열 방식으로는 이스케이프 시퀀(escape sequence)를 사용해야 한다.
+var template = '<ul>\n\t<li><a href="#">Home</a></li>\n</ul>';
+console.log(template);
+```
 
+```Javascript
+// 🔎 2️⃣ - 멀티라인 문자열 사용시
+var template = `<ul>
+    <li><a href="#">Home</a></li>
+</ul>`;
+console.log(template);
+```
 
-            ```jsx
-            // 🔎 2️⃣ - 멀티라인 문자열 사용시
-            var template = `<ul>
-                <li><a href="#">Home</a></li>
-            </ul>`;
-            console.log(template);
-            ```
-        - 표현식 삽입 <br />
-        자바스크립트에서 문자열은 + 를 통해 연결할 수 있다.
-            ```jsx
-            var first = 'minjae';
-            var las = 'cha';
+- 표현식 삽입 
+<br />
+스크립트에서 문자열은 + 를 통해 연결할 수 있다.
 
-            //ES5 일때의 문자열 연결
-            console.log('My name is" + first + ' ' + last + '.');
-            // My name is minjae cha.
-            ```
+```jsx
+var first = 'minjae';
+var las = 'cha';
+//ES5 일때의 문자열 연결
+console.log('My name is" + first + ' ' + last + '.');
+// My name is minjae cha.
+```
 
-            ```jsx
-            var first = 'minjae';
-            var las = 'cha';
+```jsx
+var first = 'minjae';
+var las = 'cha';
+//ES6 일때의 문자열 연결
+console.log(`My name is + ${first} ${last}.`);
+// My name is minjae cha.
+```
 
-            //ES6 일때의 문자열 연결
-            console.log(`My name is + ${first} ${last}.`);
-            // My name is minjae cha.
-            ```
-            표현식을 삽입하려면 ${}으로 표현식을 감싼다.
+표현식을 삽입하려면 ${}으로 표현식을 감싼다.
 
 
 <br />
