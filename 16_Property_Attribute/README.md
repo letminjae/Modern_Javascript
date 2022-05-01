@@ -293,5 +293,5 @@ deepFreezen(person);
 console.log(Object.isFrozen(person)); // true
 console.log(Object.isFrozen(person.address)); // true << 🔎 깊은 객체 변경 방지를 통해, 중접된 객체에 대해서도 동결되었다.
 person.address.city = "Seoul";
-console.log(person); // { name: 'Cha', age: 29, address: { city: 'Busan' } } << 🔎 덕분에 중접 객체의 프로퍼티 값도 갱신되지 않게 되었다.
+console.log(person); // { name: 'Cha', age: 29, address: { city: 'Busan' } } << 🔎 덕분에 중첩 객체의 프로퍼티 값도 갱신되지 않게 되었다.
 ```
