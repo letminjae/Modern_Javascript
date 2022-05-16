@@ -16,7 +16,7 @@
 - 이 중 `Math, Reflect, JSON` 는 정적 메서드만 제공
 - 생성자 함수인 표준 빌트인 객체가 생성한 인스턴스의 프로토타입은 `표준 빌트인 객체의 prototype 프로퍼티에 바인딩`
 
-  - 예 ) 표준 빌트인 객체인 `String` 을 생성자 함수로서 호출하여 생성한 `String 인스턴스의 프로토타입은 Strign.prototype`
+  - 예 ) 표준 빌트인 객체인 `String` 을 생성자 함수로서 호출하여 생성한 `String 인스턴스의 프로토타입은 String.prototype`
 
   ```jsx
   const strObj = new String("Cha");
