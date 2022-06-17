@@ -644,8 +644,8 @@ console.log(map, result); // Map(0) {} undefined
   for (const key of map.keys()) {
     console.log(key);
   }
-  // { name: 'W' }
-  // { name: 'YM' }
+  // { name: 'C' }
+  // { name: 'MJ' }
 
   for (const value of map.values()) {
     console.log(value);
@@ -656,6 +656,6 @@ console.log(map, result); // Map(0) {} undefined
   for (const entry of map.entries()) {
     console.log(entry);
   }
-  // [ { name: 'W' }, 'developer' ]
-  // [ { name: 'YM' }, 'Front Dev' ]
+  // [ { name: 'C' }, 'developer' ]
+  // [ { name: 'MJ' }, 'Front Dev' ]
   ```
